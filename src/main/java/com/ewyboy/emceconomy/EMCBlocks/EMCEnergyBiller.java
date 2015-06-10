@@ -2,11 +2,11 @@ package com.ewyboy.emceconomy.EMCBlocks;
 
 import net.minecraft.block.material.Material;
 
-public class EMCBank extends EMCBaseBlock {
+public class EMCEnergyBiller extends EMCBaseBlock {
 
-    public EMCBank() {
+    public EMCEnergyBiller() {
         super(Material.iron);
-        setBlockName("EMC-Bank");
+        setBlockName("EMC Energy Payer");
         setHardness(2.0f);
         setStepSound(soundTypeStone);
     }

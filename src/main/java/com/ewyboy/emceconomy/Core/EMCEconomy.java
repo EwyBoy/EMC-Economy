@@ -1,5 +1,6 @@
 package com.ewyboy.emceconomy.Core;
 
+import com.ewyboy.emceconomy.EMCBlocks.BlockLoader;
 import com.ewyboy.emceconomy.Files.Config;
 import com.google.common.base.Stopwatch;
 import cpw.mods.fml.common.Loader;
@@ -29,6 +30,7 @@ public final class EMCEconomy {
             Stopwatch watch = Stopwatch.createStarted();
                 System.out.println("PreInit started");
                     Config.init(event.getSuggestedConfigurationFile());
+                    BlockLoader.init();
                 System.out.println("PreInit finished after " + watch.elapsed(TimeUnit.MILLISECONDS) + "ms )");
         } else {
             System.out.println("EE3 not found. Download it at http://minecraft.curseforge.com/mc-mods/65509-ee3");
