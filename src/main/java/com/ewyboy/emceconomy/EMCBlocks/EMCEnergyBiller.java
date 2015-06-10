@@ -2,7 +2,7 @@ package com.ewyboy.emceconomy.EMCBlocks;
 
 import net.minecraft.block.material.Material;
 
-public class EMCEnergyBiller extends EMCBaseBlock {
+public class EMCEnergyBiller extends BlockBase {
 
     public EMCEnergyBiller() {
         super(Material.iron);

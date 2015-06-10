@@ -12,9 +12,7 @@ public class BlockLoader {
         loadBlocks();
     }
 
-    public static void log(Block block) {
-        System.out.println(block + " successfully loaded");
-    }
+    public static void log(Block block) {System.out.println(block + " successfully loaded");}
 
     public static Block EMCBank;
     public static Block EMCEnergyBiller;

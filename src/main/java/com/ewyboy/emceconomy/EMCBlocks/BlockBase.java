@@ -1,5 +1,6 @@
 package com.ewyboy.emceconomy.EMCBlocks;
 
+import com.ewyboy.emceconomy.EMCCreativeTab;
 import com.pahimar.ee3.tileentity.TileEntityEE;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -15,14 +16,15 @@ import net.minecraftforge.common.util.ForgeDirection;
 
 import java.util.Random;
 
-public class EMCBaseBlock  extends Block{
+public class BlockBase extends Block {
 
-    public EMCBaseBlock() {
+    public BlockBase() {
         this(Material.rock);
     }
 
-    public EMCBaseBlock(Material material) {
+    public BlockBase(Material material) {
         super(material);
+        setCreativeTab(EMCCreativeTab.EMCEconomyTab);
     }
     
     public void breakBlock(World world, int x, int y, int z, Block block, int meta) {
