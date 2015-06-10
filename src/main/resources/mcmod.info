@@ -1,0 +1,16 @@
+[
+{
+  "modid": "emceconomy",
+  "name": "EMC-Economy",
+  "description": "Builds a economy system around EE3's EMC system",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["EwyBoy"],
+  "credits": "EwyBoy",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": [EE3]
+}
+]
