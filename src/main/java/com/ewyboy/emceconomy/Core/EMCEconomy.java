@@ -3,9 +3,12 @@ package com.ewyboy.emceconomy.Core;
 import com.ewyboy.emceconomy.EMCBlocks.BlockLoader;
 import com.ewyboy.emceconomy.Files.Config;
 import com.ewyboy.emceconomy.Logger;
+import com.ewyboy.emceconomy.Proxys.CommonProxy;
+import com.ewyboy.emceconomy.Proxys.IProxy;
 import com.google.common.base.Stopwatch;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -26,6 +29,13 @@ public final class EMCEconomy {
     public EMCEconomy() {
         instance = this;
     }
+
+    @SidedProxy (
+       modId = ModID,
+       clientSide = "com.ewyboy.emceconomy.Proxys.ClientProxy",
+       serverSide = "com.ewyboy.emceconomy.Proxys.CommonProxy"
+    )
+    public static IProxy proxy;
 
     @Mod.EventHandler
     public void onServerStarting(FMLServerStartingEvent event) {}
@@ -49,9 +59,9 @@ public final class EMCEconomy {
     void init(FMLInitializationEvent event) {
         if (Loader.isModLoaded("EE3")) {
             Stopwatch watch = Stopwatch.createStarted();
-            Logger.info("Initialization started");
-
-            Logger.info("Initialization finished after " + watch.elapsed(TimeUnit.MILLISECONDS) + "ms )");
+                Logger.info("Initialization started");
+                    proxy.initRenderingAndTextures();
+                Logger.info("Initialization finished after " + watch.elapsed(TimeUnit.MILLISECONDS) + "ms )");
         } else {
             Logger.info("EE3 not found. Download it at http://minecraft.curseforge.com/mc-mods/65509-ee3");
         }
@@ -64,6 +74,7 @@ public final class EMCEconomy {
                 Logger.info("PostInitialization started");
 
                 Logger.info("PostInitialization finished after " + watch.elapsed(TimeUnit.MILLISECONDS) + "ms )");
+                Logger.info("Initialization process successfully done");
         } else {
             Logger.info("EE3 not found. Download it at http://minecraft.curseforge.com/mc-mods/65509-ee3");
         }

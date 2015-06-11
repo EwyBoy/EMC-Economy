@@ -13,4 +13,8 @@ public class ClientProxy extends CommonProxy {
         RenderIDs.EMCEnergyBiller = RenderingRegistry.getNextAvailableRenderId();
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntityBank.class, new EMCBankRenderer());
     }
+
+    public ClientProxy getClientProxy() {
+        return this;
+    }
 }
