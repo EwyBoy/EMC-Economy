@@ -1,7 +1,7 @@
 package com.ewyboy.emceconomy.EMCBlocks;
 
 import com.ewyboy.emceconomy.EMCTileEntity.TileEntityBank;
-import com.ewyboy.emceconomy.RenderIDs;
+import com.ewyboy.emceconomy.Util.RenderIDs;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
 import net.minecraft.tileentity.TileEntity;

@@ -1,4 +1,4 @@
-package com.ewyboy.emceconomy;
+package com.ewyboy.emceconomy.Util;
 
 public class RenderIDs {
     public static int EMCBank;

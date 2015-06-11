@@ -1,6 +1,6 @@
 package com.ewyboy.emceconomy.EMCBlocks;
 
-import com.ewyboy.emceconomy.EMCCreativeTab;
+import com.ewyboy.emceconomy.Util.EMCCreativeTab;
 import com.pahimar.ee3.tileentity.TileEntityEE;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;

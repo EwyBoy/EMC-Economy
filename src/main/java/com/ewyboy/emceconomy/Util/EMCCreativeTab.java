@@ -1,4 +1,4 @@
-package com.ewyboy.emceconomy;
+package com.ewyboy.emceconomy.Util;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;

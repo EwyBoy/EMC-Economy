@@ -1,9 +1,9 @@
 package com.ewyboy.emceconomy.Core;
 
 import com.ewyboy.emceconomy.EMCBlocks.BlockLoader;
+import com.ewyboy.emceconomy.EMCItems.ItemLoader;
 import com.ewyboy.emceconomy.Files.Config;
-import com.ewyboy.emceconomy.Logger;
-import com.ewyboy.emceconomy.Proxys.CommonProxy;
+import com.ewyboy.emceconomy.Util.Logger;
 import com.ewyboy.emceconomy.Proxys.IProxy;
 import com.google.common.base.Stopwatch;
 import cpw.mods.fml.common.Loader;
@@ -16,7 +16,14 @@ import cpw.mods.fml.common.event.FMLServerStartingEvent;
 
 import java.util.concurrent.TimeUnit;
 
-@Mod(modid = EMCEconomy.ModID, acceptedMinecraftVersions = "[1.7.10]", name = EMCEconomy.ModName , version = EMCEconomy.ModVersion, dependencies = EMCEconomy.ModDependencies)
+@Mod(
+    modid = EMCEconomy.ModID,
+    acceptedMinecraftVersions = "[1.7.10]",
+    name = EMCEconomy.ModName ,
+    version = EMCEconomy.ModVersion,
+    dependencies = EMCEconomy.ModDependencies
+)
+
 public final class EMCEconomy {
 
     public static final String ModID = "EMCEconomy";
@@ -48,7 +55,8 @@ public final class EMCEconomy {
             Stopwatch watch = Stopwatch.createStarted();
                 Logger.info("PreInitialization started");
                     Config.init(event.getSuggestedConfigurationFile());
-                    BlockLoader.init();
+                    BlockLoader.loadBlocks();
+                    ItemLoader.loadItems();
                 Logger.info("PreInitialization finished after " + watch.elapsed(TimeUnit.MILLISECONDS) + "ms )");
         } else {
             Logger.info("EE3 not found. Download it at http://minecraft.curseforge.com/mc-mods/65509-ee3");

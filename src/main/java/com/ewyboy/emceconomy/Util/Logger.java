@@ -1,4 +1,4 @@
-package com.ewyboy.emceconomy;
+package com.ewyboy.emceconomy.Util;
 
 import cpw.mods.fml.common.FMLLog;
 import org.apache.logging.log4j.Level;
