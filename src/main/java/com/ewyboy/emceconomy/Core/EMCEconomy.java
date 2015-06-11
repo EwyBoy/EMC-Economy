@@ -2,6 +2,7 @@ package com.ewyboy.emceconomy.Core;
 
 import com.ewyboy.emceconomy.EMCBlocks.BlockLoader;
 import com.ewyboy.emceconomy.EMCItems.ItemLoader;
+import com.ewyboy.emceconomy.EMCTileEntity.TileEntityLoader;
 import com.ewyboy.emceconomy.Files.Config;
 import com.ewyboy.emceconomy.Util.Logger;
 import com.ewyboy.emceconomy.Proxys.IProxy;
@@ -49,6 +50,7 @@ public final class EMCEconomy {
 
     @Mod.EventHandler
     void preInit(FMLPreInitializationEvent event) {
+        Logger.warn("STARTING TO LOAD EMC-ECONOMY");
         if (Loader.isModLoaded("EE3")) {
             Logger.info("EE3 found");
             Logger.info("Initialization process starting...");
@@ -57,6 +59,7 @@ public final class EMCEconomy {
                     Config.init(event.getSuggestedConfigurationFile());
                     BlockLoader.loadBlocks();
                     ItemLoader.loadItems();
+                    TileEntityLoader.loadTileEntitys();
                 Logger.info("PreInitialization finished after " + watch.elapsed(TimeUnit.MILLISECONDS) + "ms )");
         } else {
             Logger.info("EE3 not found. Download it at http://minecraft.curseforge.com/mc-mods/65509-ee3");
