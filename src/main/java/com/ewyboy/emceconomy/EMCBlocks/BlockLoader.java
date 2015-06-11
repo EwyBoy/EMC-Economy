@@ -1,5 +1,6 @@
 package com.ewyboy.emceconomy.EMCBlocks;
 
+import com.ewyboy.emceconomy.Logger;
 import com.google.common.base.Stopwatch;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
@@ -12,20 +13,21 @@ public class BlockLoader {
         loadBlocks();
     }
 
-    public static void log(Block block) {System.out.println(block + " successfully loaded");}
+    public static void log(Block block) {
+        Logger.info(block + " successfully loaded");}
 
     public static Block EMCBank;
     public static Block EMCEnergyBiller;
 
     public static void loadBlocks() {
         Stopwatch watch = Stopwatch.createStarted();
-            System.out.println("Loading blocks started");
+            Logger.info("Loading blocks started");
                 EMCBank = new EMCBank();
                     GameRegistry.registerBlock(EMCBank, "EMCBank");
                         log(EMCBank);
                 EMCEnergyBiller = new EMCEnergyBiller();
                     GameRegistry.registerBlock(EMCEnergyBiller, "EMCEnergyBiller");
                        log(EMCEnergyBiller);
-            System.out.println("Loading blocks finished after " + watch.elapsed(TimeUnit.MILLISECONDS) + "ms )");
+            Logger.info("Loading blocks finished after " + watch.elapsed(TimeUnit.MILLISECONDS) + "ms )");
     }
 }
