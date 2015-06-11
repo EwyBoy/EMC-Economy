@@ -4,6 +4,7 @@ import com.ewyboy.emceconomy.EMCBlocks.BlockLoader;
 import com.ewyboy.emceconomy.EMCItems.ItemLoader;
 import com.ewyboy.emceconomy.EMCTileEntity.TileEntityLoader;
 import com.ewyboy.emceconomy.Files.Config;
+import com.ewyboy.emceconomy.Recipes.RecipeLoader;
 import com.ewyboy.emceconomy.Util.Logger;
 import com.ewyboy.emceconomy.Proxys.IProxy;
 import com.google.common.base.Stopwatch;
@@ -17,7 +18,7 @@ import cpw.mods.fml.common.event.FMLServerStartingEvent;
 
 import java.util.concurrent.TimeUnit;
 
-@Mod(
+@Mod (
     modid = EMCEconomy.ModID,
     acceptedMinecraftVersions = "[1.7.10]",
     name = EMCEconomy.ModName ,
@@ -60,6 +61,7 @@ public final class EMCEconomy {
                     BlockLoader.loadBlocks();
                     ItemLoader.loadItems();
                     TileEntityLoader.loadTileEntitys();
+                    RecipeLoader.loadRecipes();
                 Logger.info("PreInitialization finished after " + watch.elapsed(TimeUnit.MILLISECONDS) + "ms )");
         } else {
             Logger.info("EE3 not found. Download it at http://minecraft.curseforge.com/mc-mods/65509-ee3");

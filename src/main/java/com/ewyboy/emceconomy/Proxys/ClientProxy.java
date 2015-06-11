@@ -2,7 +2,7 @@ package com.ewyboy.emceconomy.Proxys;
 
 import com.ewyboy.emceconomy.EMCTileEntity.TileEntityBank;
 import com.ewyboy.emceconomy.Util.Logger;
-import com.ewyboy.emceconomy.Util.RenderIDs;
+import com.ewyboy.emceconomy.StringMaps.RenderIDs;
 import com.ewyboy.emceconomy.Rendering.Renderer.EMCBankRenderer;
 import com.google.common.base.Stopwatch;
 import cpw.mods.fml.client.registry.ClientRegistry;
