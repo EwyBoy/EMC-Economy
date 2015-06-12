@@ -1,5 +1,7 @@
 package com.ewyboy.emceconomy.Core;
 
+import com.ewyboy.emceconomy.Commands.CommandPayPlayer;
+import com.ewyboy.emceconomy.Commands.EMCCommandBase;
 import com.ewyboy.emceconomy.EMCBlocks.BlockLoader;
 import com.ewyboy.emceconomy.EMCItems.ItemLoader;
 import com.ewyboy.emceconomy.EMCTileEntity.TileEntityLoader;
@@ -15,6 +17,9 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
+import net.minecraft.command.ICommandManager;
+import net.minecraft.command.ServerCommandManager;
+import net.minecraft.server.MinecraftServer;
 
 import java.util.concurrent.TimeUnit;
 
@@ -47,7 +52,21 @@ public final class EMCEconomy {
     public static IProxy proxy;
 
     @Mod.EventHandler
-    public void onServerStarting(FMLServerStartingEvent event) {}
+    public void onServerStarting(FMLServerStartingEvent event) {
+        Logger.warn("STARTING TO LOAD EMC-ECONOMY ON THE SERVER");
+        if (Loader.isModLoaded("EE3")) {
+            Stopwatch watch = Stopwatch.createStarted();
+                Logger.info("Loading commands started");
+                    MinecraftServer server = MinecraftServer.getServer();
+                    ICommandManager command = server.getCommandManager();
+                    ServerCommandManager manager = (ServerCommandManager) command;
+                    manager.registerCommand(new EMCCommandBase());
+                Logger.info("Commands successfully loaded after + " + watch.elapsed(TimeUnit.MILLISECONDS) + "ms");
+        } else {
+            Logger.info("EE3 not found. Download it at http://minecraft.curseforge.com/mc-mods/65509-ee3");
+        }
+
+    }
 
     @Mod.EventHandler
     void preInit(FMLPreInitializationEvent event) {

@@ -20,8 +20,8 @@ public class BlockLoader {
                 EMCBank = new EMCBank();
                     GameRegistry.registerBlock(EMCBank, "EMCBank");
                         log(EMCBank);
-                EMCEnergyBiller = new EMCEnergyBiller();
-                    GameRegistry.registerBlock(EMCEnergyBiller, "EMCEnergyBiller");
+                EMCEnergyBiller = new EMCBiller();
+                    GameRegistry.registerBlock(EMCEnergyBiller, "EMCBiller");
                        log(EMCEnergyBiller);
             Logger.info("Loading blocks finished after " + watch.elapsed(TimeUnit.MILLISECONDS) + "ms )");
     }

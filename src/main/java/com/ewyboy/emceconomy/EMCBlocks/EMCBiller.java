@@ -2,9 +2,9 @@ package com.ewyboy.emceconomy.EMCBlocks;
 
 import net.minecraft.block.material.Material;
 
-public class EMCEnergyBiller extends BlockBase {
+public class EMCBiller extends BlockBase {
 
-    public EMCEnergyBiller() {
+    public EMCBiller() {
         super(Material.iron);
         setBlockName("EMC Energy Payer");
         setHardness(2.0f);
