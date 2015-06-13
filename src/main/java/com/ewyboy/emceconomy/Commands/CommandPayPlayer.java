@@ -3,7 +3,7 @@ package com.ewyboy.emceconomy.Commands;
 import com.ewyboy.emceconomy.Util.Logger;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.ICommandSender;
-import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.ChatComponentText;
 
 public class CommandPayPlayer extends CommandBase {
 
@@ -23,11 +23,7 @@ public class CommandPayPlayer extends CommandBase {
 
     @Override
     public void processCommand(ICommandSender sender, String[] strings) {
-        if (sender instanceof EntityPlayer) {
-            Logger.info("Command " + getCommandName() + " just got used");
-                EntityPlayer player = (EntityPlayer) sender;
-        } else {
-            Logger.warn("This command can only be performed by a player");
-        }
+        Logger.info("Command " + getCommandName() + " just got used");
+        sender.addChatMessage(new ChatComponentText("Payed testPlayer32 1000 EMC"));
     }
 }

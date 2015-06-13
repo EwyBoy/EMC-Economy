@@ -1,14 +1,13 @@
 package com.ewyboy.emceconomy.Core;
 
-import com.ewyboy.emceconomy.Commands.CommandPayPlayer;
 import com.ewyboy.emceconomy.Commands.EMCCommandBase;
 import com.ewyboy.emceconomy.EMCBlocks.BlockLoader;
 import com.ewyboy.emceconomy.EMCItems.ItemLoader;
 import com.ewyboy.emceconomy.EMCTileEntity.TileEntityLoader;
 import com.ewyboy.emceconomy.Files.Config;
+import com.ewyboy.emceconomy.Proxys.IProxy;
 import com.ewyboy.emceconomy.Recipes.RecipeLoader;
 import com.ewyboy.emceconomy.Util.Logger;
-import com.ewyboy.emceconomy.Proxys.IProxy;
 import com.google.common.base.Stopwatch;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
