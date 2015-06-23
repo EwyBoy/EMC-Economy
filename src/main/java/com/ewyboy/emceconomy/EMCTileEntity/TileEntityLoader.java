@@ -12,13 +12,15 @@ public class TileEntityLoader {
     public static void log(TileEntity entity) {Logger.info(entity + " successfully loaded");}
 
     public static TileEntity EMCBankTileEntity;
+    public static TileEntity EMCBillerTileEntity;
 
     public static void loadTileEntitys() {
         Stopwatch watch = Stopwatch.createStarted();
             Logger.info("Loading tile entities started");
                 EMCBankTileEntity = new TileEntityBank();
+                EMCBillerTileEntity = new TileEntityEnergyBiller();
                 GameRegistry.registerTileEntity(TileEntityBank.class, "TileEntityEMCBank");
-                log(EMCBankTileEntity);
+                GameRegistry.registerTileEntity(TileEntityEnergyBiller.class, "TileEntityEMCBiller");
             Logger.info("Loading tile entities finished after " + watch.elapsed(TimeUnit.MILLISECONDS) + "ms");
     }
 

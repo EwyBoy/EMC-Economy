@@ -4,7 +4,7 @@ import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 
-public class EMCBiller extends ModelBase {
+public class EMCBillerModel extends ModelBase {
 
     public ModelRenderer shape1;
     public ModelRenderer shape3;
@@ -20,7 +20,7 @@ public class EMCBiller extends ModelBase {
     public ModelRenderer shape8_6;
     public ModelRenderer shape8_7;
 
-    public EMCBiller() {
+    public EMCBillerModel() {
         this.textureWidth = 64;
         this.textureHeight = 64;
         this.shape8_2 = new ModelRenderer(this, 0, 42);

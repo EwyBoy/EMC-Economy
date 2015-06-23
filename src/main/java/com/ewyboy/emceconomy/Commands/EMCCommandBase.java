@@ -1,5 +1,6 @@
 package com.ewyboy.emceconomy.Commands;
 
+import com.ewyboy.emceconomy.Util.Logger;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.ICommandSender;
 
@@ -56,9 +57,11 @@ public class EMCCommandBase extends CommandBase {
     }
 
     static {
-        modCommands.add(new CommandPayPlayer());
-        modCommands.add(new CommandCheckBalance());
-        modCommands.add(new CommandTransfer());
+        Logger.info("Loading in commands");
+            modCommands.add(new CommandPayPlayer());
+            modCommands.add(new CommandCheckBalance());
+            modCommands.add(new CommandTransfer());
+        Logger.info("Commands loaded");
 
         Iterator var0 = modCommands.iterator();
 

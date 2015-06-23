@@ -23,22 +23,22 @@ public class TileEntityBank extends TileEntityEE implements IInventory {
     }
 
     @Override
-    public ItemStack getStackInSlot(int p_70301_1_) {
+    public ItemStack getStackInSlot(int i) {
         return null;
     }
 
     @Override
-    public ItemStack decrStackSize(int p_70298_1_, int p_70298_2_) {
+    public ItemStack decrStackSize(int i, int i1) {
         return null;
     }
 
     @Override
-    public ItemStack getStackInSlotOnClosing(int p_70304_1_) {
+    public ItemStack getStackInSlotOnClosing(int i) {
         return null;
     }
 
     @Override
-    public void setInventorySlotContents(int p_70299_1_, ItemStack p_70299_2_) {
+    public void setInventorySlotContents(int p_70299_1_, ItemStack stack) {
 
     }
 
@@ -58,7 +58,7 @@ public class TileEntityBank extends TileEntityEE implements IInventory {
     }
 
     @Override
-    public boolean isUseableByPlayer(EntityPlayer p_70300_1_) {
+    public boolean isUseableByPlayer(EntityPlayer player) {
         return false;
     }
 
@@ -73,7 +73,7 @@ public class TileEntityBank extends TileEntityEE implements IInventory {
     }
 
     @Override
-    public boolean isItemValidForSlot(int p_94041_1_, ItemStack p_94041_2_) {
+    public boolean isItemValidForSlot(int i, ItemStack stack) {
         return false;
     }
 }

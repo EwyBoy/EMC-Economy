@@ -24,6 +24,6 @@ public class CommandCheckBalance extends CommandBase {
     @Override
     public void processCommand(ICommandSender sender, String[] strings) {
         Logger.info("Command " + getCommandName() + " just got used");
-        sender.addChatMessage(new ChatComponentText("Transferred EMC"));
+        sender.addChatMessage(new ChatComponentText("Wallet balance = 4371 EMC | Bank balance = 17636 EMC"));
     }
 }

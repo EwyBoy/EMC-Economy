@@ -1,6 +1,8 @@
 package com.ewyboy.emceconomy.Proxys;
 
 import com.ewyboy.emceconomy.EMCTileEntity.TileEntityBank;
+import com.ewyboy.emceconomy.EMCTileEntity.TileEntityEnergyBiller;
+import com.ewyboy.emceconomy.Rendering.Renderer.EMCBillerRenderer;
 import com.ewyboy.emceconomy.Util.Logger;
 import com.ewyboy.emceconomy.StringMaps.RenderIDs;
 import com.ewyboy.emceconomy.Rendering.Renderer.EMCBankRenderer;
@@ -19,7 +21,8 @@ public class ClientProxy extends CommonProxy {
                 ClientRegistry.bindTileEntitySpecialRenderer(TileEntityBank.class, new EMCBankRenderer());
                     Logger.info("EMCBank model successfully bound to EMCBank block");
                 RenderIDs.EMCEnergyBiller = RenderingRegistry.getNextAvailableRenderId();
-            Logger.info("Loading models finished after " + watch.elapsed(TimeUnit.MILLISECONDS) + "ms )");
+                ClientRegistry.bindTileEntitySpecialRenderer(TileEntityEnergyBiller.class, new EMCBillerRenderer());
+        Logger.info("Loading models finished after " + watch.elapsed(TimeUnit.MILLISECONDS) + "ms )");
     }
 
     public ClientProxy getClientProxy() {
