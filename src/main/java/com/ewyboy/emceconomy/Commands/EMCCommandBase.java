@@ -19,7 +19,7 @@ public class EMCCommandBase extends CommandBase {
     }
 
     public String getCommandUsage(ICommandSender commandSender) {
-        return "commands.ee3.usage";
+        return "";
     }
 
     public void processCommand(ICommandSender commandSender, String[] args) {
@@ -57,6 +57,8 @@ public class EMCCommandBase extends CommandBase {
 
     static {
         modCommands.add(new CommandPayPlayer());
+        modCommands.add(new CommandCheckBalance());
+        modCommands.add(new CommandTransfer());
 
         Iterator var0 = modCommands.iterator();
 
